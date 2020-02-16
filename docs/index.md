@@ -17,7 +17,7 @@ This is useful for things like:
 
 ## The first high level design
 
-![rough architecture sketch](/images/folrep-rough-sketch.jpg)
+![rough architecture sketch](/docs/images/folrep-rough-sketch.jpg)
 
 The idea behind this is a workflow working something like this.
 
