@@ -20,6 +20,7 @@ fi
 
 echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
 
-docker build -t "${REPO_USERNAME}"/"${IMAGE_NAME}":"$IMAGE_TAG"
+# Dockerfile is in the root of the repo
+docker build -t "${REPO_USERNAME}"/"${IMAGE_NAME}":"$IMAGE_TAG" ../.
 
 docker push "${REPO_USERNAME}"/"${IMAGE_NAME}":"$IMAGE_TAG"
