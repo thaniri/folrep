@@ -17,7 +17,7 @@ This is useful for things like:
 
 ## The first high level design
 
-![rough architecture sketch][images/folrep-rough-sketch.jpg]
+![rough architecture sketch][{{ site.baseurl }}/images/folrep-rough-sketch.jpg]
 
 The idea behind this is a workflow working something like this.
 
@@ -25,4 +25,4 @@ A user creates an account on folrep, adds their Github API key, and inputs into 
 
 A seperate emailing service will periodically query a database for all the repos that all of the users are tracking. Then on a per-user basis it generates a report of the latest versions of each repo they are tracking, and if any repos have gotten a new version that is different than the one they are currently using. Some options to reduce noise will be to do things like only reporting on releases that came out that week, or only reporting on releases where the version is different than the one the user is using.
 
-
+At first this service will be a weekly report.
