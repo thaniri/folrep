@@ -4,9 +4,9 @@
 
 set -ex
 
-$REPO_USERNAME="folrep"
-$IMAGE_NAME="folrep"
-$IMAGE_TAG="latest"
+REPO_USERNAME="folrep"
+IMAGE_NAME="folrep"
+IMAGE_TAG="latest"
 
 if [[ -z "${DOCKER_USERNAME}" ]]; then
   echo "DOCKER_USERNAME is not set"
