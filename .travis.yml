@@ -1,0 +1,10 @@
+language: go
+go:
+  - 1.13
+services:
+  - docker
+branches:
+  only:
+  - master
+  - marekCIPipline
+script: go test -v ./...
