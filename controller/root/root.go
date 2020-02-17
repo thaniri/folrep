@@ -6,5 +6,6 @@ import (
 )
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintln(w, "Hello world!")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	fmt.Fprintln(w, "Hello world!")
 }

@@ -3,8 +3,8 @@ package root
 import (
 	"net/http"
 	"net/http/httptest"
-	"testing"
 	"strings"
+	"testing"
 )
 
 func TestIndexHandler(t *testing.T) {
