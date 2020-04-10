@@ -14,6 +14,8 @@ func New(logger zap.SugaredLogger) http.Handler {
 	router.HandleFunc("/metrics", metrics.MetricsHandler)
 
 	router.HandleFunc("/", root.IndexHandler)
+	//myLoggingHandler := LoggingHandler(logger, root.IndexHandler) <- this cannot work
+	router.HandleFunc("/", root.IndexHandler)
 	router.Use(Middleware)
 	return router
 }
@@ -24,7 +26,7 @@ type loggingHandler struct {
 }
 
 func (h loggingHandler) ServeHTTP(w http.ResponseWriter, req *http.Request) {
-	fmt.Println("sup")
+	fmt.Println("test")
 }
 
 func LoggingHandler(logger zap.SugaredLogger, h http.Handler) http.Handler {
