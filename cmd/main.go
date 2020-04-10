@@ -1,13 +1,18 @@
 package main
 
 import (
+	"go.uber.org/zap"
 	"github.com/thaniri/folrep/controller"
 	"net/http"
 	"time"
 )
 
 func main() {
-	controller := controller.New()
+	zapLogger, _ := zap.NewProduction()
+	defer zapLogger.Sync()
+	logger := zapLogger.Sugar()
+	logger.Info("hahaha")
+	controller := controller.New(*logger)
 
 	webApp := &http.Server{
 		Addr:         "0.0.0.0:8080",

@@ -17,3 +17,5 @@
 # Swap files
 *.swp
 
+# Jetbrains
+.idea/
